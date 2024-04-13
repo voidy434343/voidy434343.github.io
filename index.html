@@ -23,4 +23,26 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-bottom: 20px; /* Add margin to the
+        margin-bottom: 20px; /* Add margin to the bottom */
+        width: 100%; /* Set the width of the button to 100% */
+    }
+</style>
+</head>
+<body>
+
+<div></div> <!-- This empty div creates space at the top -->
+<button id="myButton">script</button>
+
+<script>
+    document.getElementById("myButton").addEventListener("click", function() {
+        var text = "test";
+        navigator.clipboard.writeText(text).then(function() {
+            console.log('Text "' + text + '" was successfully copied to the clipboard.');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    });
+</script>
+
+</body>
+</html>
