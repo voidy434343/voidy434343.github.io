@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zeouron</title>
+<title>zeouron</title> <!-- Changed title to "zeouron" -->
 <style>
     body {
         display: flex;
@@ -27,16 +27,19 @@
 </head>
 <body>
 
-<button id="myButton">Click me</button>
+<button id="myButton">script</button> <!-- Changed text of the button to "script" -->
 
 <script>
-    var scriptcode = "Test";
-     
-    document.getElementById("myButton").addEventListener("click", function() 
-        navigator.clipboard.writeText(scriptcode);
+    // JavaScript code to set text to user's clipboard when button is clicked
+    document.getElementById("myButton").addEventListener("click", function() {
+        var text = "test";
+        navigator.clipboard.writeText(text).then(function() {
+            console.log('Text "' + text + '" was successfully copied to the clipboard.');
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
     });
 </script>
 
 </body>
 </html>
-
