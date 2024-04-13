@@ -12,7 +12,7 @@
         justify-content: space-between; /* Align items with space between */
         min-height: 100vh; /* Ensure the body covers the entire viewport height */
         margin: 0;
-        background-color: darkgray; /* Changed background color to dark gray */
+        background-color: rgb(30, 30, 30); /* Set background color to RGB 30,30,30 */
     }
 
     button {
@@ -23,26 +23,4 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-bottom: 20px; /* Add margin to the bottom */
-        width: 100%; /* Set the width of the button to 100% */
-    }
-</style>
-</head>
-<body>
-
-<div></div> <!-- This empty div creates space at the top -->
-<button id="myButton">script</button>
-
-<script>
-    document.getElementById("myButton").addEventListener("click", function() {
-        var text = "test";
-        navigator.clipboard.writeText(text).then(function() {
-            console.log('Text "' + text + '" was successfully copied to the clipboard.');
-        }, function(err) {
-            console.error('Could not copy text: ', err);
-        });
-    });
-</script>
-
-</body>
-</html>
+        margin-bottom: 20px; /* Add margin to the
